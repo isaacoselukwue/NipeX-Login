@@ -1,0 +1,67 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:lv="nativescript-ui-listview" xmlns:sd="nativescript-ui-sidedrawer"
+    xmlns:f="nativescript-fresco">
+
+    <ActionBar class="action-bar">
+        <Label text="Directory" class="action-bar-label" />
+    </ActionBar>
+    <sd:RadSideDrawer id="sideDrawer">
+
+        <!-- side drawer content -->
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout class="sidedrawer-left">
+                <StackLayout class="sidedrawer-content">
+                    <Label text="Home" class="sidedrawer-list-item-text" tap="onClose" />
+                    <Label text="News Feed" class="sidedrawer-list-item-text"
+                        tap="onNewsfeed" />
+                    <Label text="Directory" class="sidedrawer-list-item-text"
+                        tap="onDirectory" />
+                    <Label text="Videos" class="sidedrawer-list-item-text"
+                        tap="onVideos" />
+                    <Label text="Chat" class="sidedrawer-list-item-text" tap="onChat" />
+                    <Label text="WeChat" class="sidedrawer-list-item-text"
+                        tap="onChatview" />
+                    <Label text="Chatbot" class="sidedrawer-list-item-text"
+                        tap="onChatbot" />
+                    <Label text="Email" class="sidedrawer-list-item-text" tap="onEmail" />
+                </StackLayout>
+                <Label text="Close" color="black" padding="10" style="horizontal-align: center"
+                    tap="onClose" />
+                <Label text="Logout" color="black" padding="10" style="horizontal-align: center"
+                    tap="navigateLogin" />
+            </StackLayout>
+        </sd:RadSideDrawer.drawerContent>
+        <sd:RadSideDrawer.mainContent>
+            <StackLayout>
+                <SearchBar hint="Search People..." text="{{ searchPhrase }}"
+                    submit="{{ onSearchSubmit }}" clear="{{ clear }}" class="search-bar" />
+                <lv:RadListView id="list-view" row="0" items="{{ people }}"
+                    marginRight="-2" height="100%">
+                    <lv:RadListView.itemTemplate>
+                        <StackLayout>
+                            <StackLayout margin="0">
+                                <ios>
+                                    <Image src="{{ imageSrc }}" stretch="aspectFill"
+                                        height="200" />
+                                </ios>
+                                <android>
+                                    <f:FrescoDrawee horizontalAlignment="stretch"
+                                        height="350" imageUri="{{ imageSrc }}" />
+                                </android>
+                                <StackLayout paddingTop="15" paddingBottom="15"
+                                    paddingLeft="15" paddingRight="15"
+                                    backgroundColor="White">
+                                    <Label text="{{ name }}" class="person-name" />
+                                    <Label text="{{ title }}" class="person-title" />
+                                    <Label text="{{ email }}" class="person-email" />
+                                </StackLayout>
+                                <StackLayout class="divider" height="10"></StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </lv:RadListView.itemTemplate>
+                </lv:RadListView>
+            </StackLayout>
+        </sd:RadSideDrawer.mainContent>
+
+    </sd:RadSideDrawer>
+</Page>

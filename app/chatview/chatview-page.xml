@@ -1,0 +1,46 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:chatView="nativescript-chatview"
+    navigatingTo="onNavigatingTo" xmlns:sd="nativescript-ui-sidedrawer"
+    actionBarHidden="false">
+
+    <Page.actionBar>
+        <ActionBar title="nativescript-chatview Demo">
+        </ActionBar>
+    </Page.actionBar>
+
+    <sd:RadSideDrawer id="sideDrawer">
+
+        <!-- side drawer content -->
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout class="sidedrawer-left">
+                <StackLayout class="sidedrawer-content">
+                    <Label text="Home" class="sidedrawer-list-item-text" tap="onClose" />
+                    <Label text="News Feed" class="sidedrawer-list-item-text"
+                        tap="onNewsfeed" />
+                    <Label text="Directory" class="sidedrawer-list-item-text"
+                        tap="onDirectory" />
+                    <Label text="Videos" class="sidedrawer-list-item-text"
+                        tap="onVideos" />
+                    <Label text="Chat" class="sidedrawer-list-item-text" tap="onChat" />
+                    <Label text="WeChat" class="sidedrawer-list-item-text"
+                        tap="onChatview" />
+                    <Label text="Chatbot" class="sidedrawer-list-item-text"
+                        tap="onChatbot" />
+                    <Label text="Email" class="sidedrawer-list-item-text" tap="onEmail" />
+                </StackLayout>
+
+                <Button text="Close" color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="0" tap="onClose" />
+                <Button color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="1" text="Logout" tap="navigateLogin" />
+            </StackLayout>
+        </sd:RadSideDrawer.drawerContent>
+
+        <!-- The main content -->
+        <sd:RadSideDrawer.mainContent>
+
+
+
+        </sd:RadSideDrawer.mainContent>
+
+    </sd:RadSideDrawer>
+</Page>

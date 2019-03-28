@@ -1,0 +1,51 @@
+@import 'nativescript-theme-core/css/core.light.css';
+
+.action-bar {
+    background-color: White;
+}
+
+.action-bar-label {
+    font-family: 'Social Gothic';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20;
+    color: Black;
+}
+.news-title {
+    color: #333f4a;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    font-size: 24;
+}
+
+.news-source {
+    color: White;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    text-transform: uppercase;
+    font-size: 20;
+    padding: 8 0 3 10;
+}
+
+.search-bar {
+    background-color: #f0f0f0;
+    font-family: 'Opinion Pro ExtraCondensed', 'Mint_Type_-_Opinion_Pro_ExtraCondensed_Light';
+    font-size: 24;
+}
+
+.searching {
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.not-searching {
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slideDown {
+    from { transform: translateY(-60); }
+    to { transform: translateY(0); }
+}
+@keyframes slideUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-60); }
+}

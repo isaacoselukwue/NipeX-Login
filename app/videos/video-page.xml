@@ -1,0 +1,50 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:VideoPlayer="../nativescript-videoplayer" xmlns:sd="nativescript-ui-sidedrawer"
+    actionBarHidden="false">
+    <ActionBar title="Video" class="action-bar" />
+    <sd:RadSideDrawer id="sideDrawer">
+
+        <!-- side drawer content -->
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout class="sidedrawer-left">
+                <StackLayout class="sidedrawer-content">
+                    <Label text="Home" class="sidedrawer-list-item-text" tap="onClose" />
+                    <Label text="News Feed" class="sidedrawer-list-item-text"
+                        tap="onNewsfeed" />
+                    <Label text="Directory" class="sidedrawer-list-item-text"
+                        tap="onDirectory" />
+                    <Label text="Videos" class="sidedrawer-list-item-text"
+                        tap="onVideos" />
+                    <Label text="Chat" class="sidedrawer-list-item-text" tap="onChat" />
+                    <Label text="WeChat" class="sidedrawer-list-item-text"
+                        tap="onChatview" />
+                    <Label text="Chatbot" class="sidedrawer-list-item-text"
+                        tap="onChatbot" />
+                    <Label text="Email" class="sidedrawer-list-item-text" tap="onEmail" />
+                </StackLayout>
+
+                <Button text="Close" color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="0" tap="onClose" />
+                <Button color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="1" text="Logout" tap="navigateLogin" />
+            </StackLayout>
+        </sd:RadSideDrawer.drawerContent>
+
+        <!-- The main content -->
+        <sd:RadSideDrawer.mainContent>
+
+
+            <ScrollView>
+                <StackLayout class="home-panel">
+                    <VideoPlayer:Video id="nativeVideoPlayer" controls="true"
+                        autoplay="true" height="300" src="https://r2---sn-i5h7lner.googlevideo.com/videoplayback?key=yt6&mime=video%2Fmp4&gir=yes&signature=48A9FAFEB0C78781929556AC18A34A2DF6CA8299.99812D9FD99DD37366303BA162B064338475AAAF&clen=7607742&source=youtube&lmt=1515799029422011&ei=oSaTXKeUKdPUgQewsqvQBA&c=WEB&ms=au%2Conr&sparams=clen%2Cdur%2Cei%2Cgir%2Cid%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cexpire&mv=u&mt=1553146679&requiressl=yes&ip=2001%3A1af8%3A4070%3Aa009%3A1%3A%3Affff&pl=53&id=o-AE-XcGqD-78H5gaZ6XvvjlffguMvwHehlgMpwTS6qGMw&mn=sn-i5h7lner%2Csn-4g5e6nzl&mm=31%2C26&itag=18&expire=1553169153&ratebypass=yes&dur=138.251&fvip=2&ipbits=0" />
+                    <Button class="btn btn-primary" text="Play" tap="play" />
+                    <Button class="btn btn-primary" text="Pause" tap="pause" />
+                    <Button class="btn btn-primary" text="Go To 30 seconds"
+                        tap="seekToTime" />
+                </StackLayout>
+            </ScrollView>
+        </sd:RadSideDrawer.mainContent>
+
+    </sd:RadSideDrawer>
+</Page>

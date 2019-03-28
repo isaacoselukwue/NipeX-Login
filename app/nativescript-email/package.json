@@ -1,0 +1,39 @@
+{
+  "name": "nativescript-email",
+  "version": "1.5.3",
+  "description": "Email plugin for your NativeScript app",
+  "main": "email",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "ios": "2.3.0",
+      "android": "2.3.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EddyVerbruggen/nativescript-email.git"
+  },
+  "keywords": [
+    "ecosystem:NativeScript",
+    "NativeScript",
+    "Mail",
+    "Email",
+    "E-mail",
+    "Draft",
+    "Compose",
+    "MailComposer",
+    "Attachment"
+  ],
+  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "contributors": [
+    {
+      "name": "Brad Martin",
+      "email": "bradwaynemartin@gmail.com",
+      "url": "https://github.com/BradMartin"
+    }
+  ],
+  "license": "MIT",
+  "bugs": "https://github.com/eddyverbruggen/nativescript-email/issues",
+  "homepage": "https://github.com/eddyverbruggen/nativescript-email"
+}

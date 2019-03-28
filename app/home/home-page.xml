@@ -1,0 +1,77 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:sd="nativescript-ui-sidedrawer"
+    loaded="pageLoaded" actionBarHidden="true">
+
+    <ActionBar title="Home" class="action-bar" />
+
+    <sd:RadSideDrawer id="sideDrawer">
+
+        <!-- side drawer content -->
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout class="sidedrawer-left">
+                <StackLayout class="sidedrawer-content">
+                    <Label text="Home" class="sidedrawer-list-item-text" tap="onClose" />
+                    <Label text="News Feed" class="sidedrawer-list-item-text"
+                        tap="onNewsfeed" />
+                    <Label text="Directory" class="sidedrawer-list-item-text"
+                        tap="onDirectory" />
+                    <Label text="Videos" class="sidedrawer-list-item-text"
+                        tap="onVideos" />
+                    <Label text="Chat" class="sidedrawer-list-item-text" tap="onChat" />
+                    <Label text="WeChat" class="sidedrawer-list-item-text" tap="onChatview" />
+                    <Label text="Chatbot" class="sidedrawer-list-item-text"
+                        tap="onChatbot" />
+                    <Label text="Email" class="sidedrawer-list-item-text" tap="onEmail" />
+                </StackLayout>
+
+                <Button text="Close" color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="0" tap="onClose" />
+                <Button color="black" padding="10" style="horizontal-align: center"
+                    row="0" col="1" text="Logout" tap="navigateLogin" />
+            </StackLayout>
+        </sd:RadSideDrawer.drawerContent>
+
+        <!-- The main content -->
+        <sd:RadSideDrawer.mainContent>
+            <AbsoluteLayout width="100%" height="100%" backgroundColor="#e8e7e7">
+                <StackLayout top="0" left="0" width="100%" height="100%">
+                    <GridLayout columns="auto, auto , auto" row="auto" width="100%"
+                        height="auto" class="profile-container"
+                        verticalAlignment="middle">
+                        <Image row="0" col="0" src="~/images/drawer-icon.png"
+                            tap="toggleDrawer" class="drawer-icon" />
+                        <StackLayout row="0" col="1" orientation="vertical"
+                            width="80" height="80" class="profile-photo-container">
+                            <Image src="~/images/me.png" class="profile__photo" />
+                        </StackLayout>
+                        <StackLayout row="0" col="2" height="50" orientation="vertical"
+                            class="profile-information-container">
+                            <Label text="Isaac Oselukwue" class="profile__name" />
+                            <Label text="princeizak@live.com" class="profile__email" />
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout columns="auto, auto, *" rows="auto" width="100%"
+                        height="auto" class="owe-dashboard">
+
+                    </GridLayout>
+                    <FlexboxLayout justifyContent="flex-end" class="owe-list-filter">
+
+                    </FlexboxLayout>
+
+                    <ScrollView backgroundColor="#e8e7e7">
+                        <Label text="welcome to your homepage" />
+
+
+                        <WebView height="1695px" src="http://www.nipexnig.com/newsletter/" />
+                    </ScrollView>
+                </StackLayout>
+
+                <FlexboxLayout justifyContent="flex-end" width="100%" id="addButtonContainer"
+                    left="0">
+                    <Button class="add-button" row="0" col="1" text="+" tap="navigateLogin" />
+                </FlexboxLayout>
+            </AbsoluteLayout>
+        </sd:RadSideDrawer.mainContent>
+
+    </sd:RadSideDrawer>
+
+</Page>
